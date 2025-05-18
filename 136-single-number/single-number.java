@@ -1,22 +1,21 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        int tmep=0;int i=0;int j=0;
-        for(i=0;i<nums.length;i++)
-        {
-            for(j=0;j<nums.length;j++)
+        for(int i=0;i<nums.length;i++)
+        {   int count =0;
+            for(int j=0;j<nums.length;j++)
             {
                 if(nums[i]==nums[j])
                 {
-                    tmep++;
+                    count ++;
                 }
+                
+                
             }
-            if(tmep<2)
+            if(count<2)
             {
-                break;
+                    return nums[i];
             }
-            tmep=0;
         }
-        return nums[i];
-        
+    return nums[0];    
     }
 }
