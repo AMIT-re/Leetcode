@@ -10,23 +10,20 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) 
-    {   if(head==null || head.next==null)
-        {
-            return head;
-        }
+    {
+         ListNode fast=head;
+         ListNode slow=head;
+         while(fast!=null && fast.next!=null)
+         {  slow=slow.next;
+            fast=fast.next.next;
+            
+         }
+        return slow;
     
-        ListNode temp=head;
-        int c=0;
-        while(temp!=null)
-        {
-            temp=temp.next;
-            c++;
-        } 
-        int f=c/2;
-        for (int i = 0; i < f; i++) {
-            head = head.next;
-        }
-
-        return head;         
+    
+    
+    
+    
     }
+
 }
