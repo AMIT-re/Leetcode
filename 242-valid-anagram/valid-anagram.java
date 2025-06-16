@@ -4,11 +4,11 @@ class Solution {
         {
             return false;
         }
-        int c[]=new int[256];
+        int c[]=new int[26];
         for(int i=0;i<s.length();i++)
         {
-            c[s.charAt(i)]++;
-            c[t.charAt(i)]--;
+            c[s.charAt(i)-'a']++;
+            c[t.charAt(i)-'a']--;
         }
         for(int i=0;i<c.length;i++)
         {
