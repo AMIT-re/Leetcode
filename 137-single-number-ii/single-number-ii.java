@@ -5,9 +5,9 @@ class Solution {
         {
             hm.put(nums[i],hm.getOrDefault(nums[i],0)+1);
         }
-        for (Map.Entry<Integer, Integer> entry : hm.entrySet()) {
-            if (entry.getValue() == 1) {
-                return entry.getKey();
+        for(Map.Entry<Integer,Integer> it : hm.entrySet()){
+            if(it.getValue() == 1) {
+                return it.getKey();
             }
         }
         return -1;
