@@ -7,8 +7,14 @@ class Solution {
             {
                 return true;
             }
-            hm.put(nums[i],0);
-        } 
+            else
+            {
+                hm.put(nums[i],i);
+            }
+        }
+
         return false;
+
+        
     }
 }
