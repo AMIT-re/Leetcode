@@ -4,20 +4,23 @@ class Solution {
         {
             return false;
         }
-        int c[]=new int[26];
+        int n[]=new int[26];
         for(int i=0;i<s.length();i++)
         {
-            c[s.charAt(i)-'a']++;
-            c[t.charAt(i)-'a']--;
+            n[s.charAt(i)-'a']++;
+            n[t.charAt(i)-'a']--;
+
         }
-        for(int i=0;i<c.length;i++)
+
+        for(int i=0;i<n.length;i++)
         {
-            if(c[i]!=0)
+            if(n[i]!=0)
             {
                 return false;
             }
+            
         }
-        return true;
         
+        return true;
     }
 }
